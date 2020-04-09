@@ -27,8 +27,8 @@
         <script src="../_static/language_data.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script src="../_static/doctr-versions-menu.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"extensions": ["tex2jax.js"], "jax": ["input/TeX", "output/SVG"], "TeX": {"extensions": ["AMSmath.js", "AMSsymbols.js"], "Macros": {"tr": ["{\\operatorname{tr}}", 0], "diag": ["{\\operatorname{diag}}", 0], "abs": ["{\\operatorname{abs}}", 0], "pop": ["{\\operatorname{pop}}", 0], "ee": ["{\\text{e}}", 0], "ii": ["{\\text{i}}", 0], "aux": ["{\\text{aux}}", 0], "opt": ["{\\text{opt}}", 0], "tgt": ["{\\text{tgt}}", 0], "init": ["{\\text{init}}", 0], "lab": ["{\\text{lab}}", 0], "rwa": ["{\\text{rwa}}", 0], "bra": ["{\\langle#1\\vert}", 1], "ket": ["{\\vert#1\\rangle}", 1], "Bra": ["{\\left\\langle#1\\right\\vert}", 1], "Braket": ["{\\left\\langle #1\\vphantom{#2} \\mid #2\\vphantom{#1}\\right\\rangle}", 2], "ketbra": ["{\\vert#1\\rangle\\!\\langle#2\\vert}", 2], "Ket": ["{\\left\\vert#1\\right\\rangle}", 1], "mat": ["{\\mathbf{#1}}", 1], "op": ["{\\hat{#1}}", 1], "Op": ["{\\hat{#1}}", 1], "dd": ["{\\,\\text{d}}", 0], "daggered": ["{^{\\dagger}}", 0], "transposed": ["{^{\\text{T}}}", 0], "Liouville": ["{\\mathcal{L}}", 0], "DynMap": ["{\\mathcal{E}}", 0], "identity": ["{\\mathbf{1}}", 0], "Norm": ["{\\left\\lVert#1\\right\\rVert}", 1], "norm": ["{\\lVert#1\\rVert}", 1], "Abs": ["{\\left\\vert#1\\right\\vert}", 1], "avg": ["{\\langle#1\\rangle}", 1], "Avg": ["{\\left\\langle#1\\right\\rangle}", 1], "AbsSq": ["{\\left\\vert#1\\right\\vert^2}", 1], "Re": ["{\\operatorname{Re}}", 0], "Im": ["{\\operatorname{Im}}", 0], "Real": ["{\\mathbb{R}}", 0], "Complex": ["{\\mathbb{C}}", 0], "Integer": ["{\\mathbb{N}}", 0]}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
@@ -352,14 +352,14 @@ particular environment.</p>
 </div>
 <div class="section" id="reference">
 <h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
-<dl class="data">
+<dl class="py data">
 <dt id="krotov.parallelization.USE_LOKY">
 <code class="sig-prename descclassname">krotov.parallelization.</code><code class="sig-name descname">USE_LOKY</code><em class="property"> = False</em><a class="headerlink" href="#krotov.parallelization.USE_LOKY" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to use <a class="reference external" href="https://loky.readthedocs.io/en/stable/API.html#module-loky" title="(in loky v2.4.2)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">loky</span></code></a> instead of <a class="reference external" href="https://docs.python.org/3.7/library/multiprocessing.html#module-multiprocessing" title="(in Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code></a>.</p>
 <p>Set by <a class="reference internal" href="#krotov.parallelization.set_parallelization" title="krotov.parallelization.set_parallelization"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_parallelization()</span></code></a>.</p>
 </dd></dl>
 
-<dl class="data">
+<dl class="py data">
 <dt id="krotov.parallelization.USE_THREADPOOL_LIMITS">
 <code class="sig-prename descclassname">krotov.parallelization.</code><code class="sig-name descname">USE_THREADPOOL_LIMITS</code><em class="property"> = True</em><a class="headerlink" href="#krotov.parallelization.USE_THREADPOOL_LIMITS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to limit the number of low-level BLAS/OpenMP threads.</p>
@@ -382,9 +382,9 @@ following environment variables in your shell:</p>
 </div>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="krotov.parallelization.set_parallelization">
-<code class="sig-prename descclassname">krotov.parallelization.</code><code class="sig-name descname">set_parallelization</code><span class="sig-paren">(</span><em class="sig-param">use_loky=False</em>, <em class="sig-param">start_method=None</em>, <em class="sig-param">loky_pickler=None</em>, <em class="sig-param">use_threadpool_limits=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/krotov/parallelization.html#set_parallelization"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#krotov.parallelization.set_parallelization" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">krotov.parallelization.</code><code class="sig-name descname">set_parallelization</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">use_loky</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">start_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loky_pickler</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_threadpool_limits</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/krotov/parallelization.html#set_parallelization"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#krotov.parallelization.set_parallelization" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configure multi-process parallelization.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -425,9 +425,9 @@ variables may be set at any time.</p>
 </div>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="krotov.parallelization.parallel_map">
-<code class="sig-prename descclassname">krotov.parallelization.</code><code class="sig-name descname">parallel_map</code><span class="sig-paren">(</span><em class="sig-param">task</em>, <em class="sig-param">values</em>, <em class="sig-param">task_args=None</em>, <em class="sig-param">task_kwargs=None</em>, <em class="sig-param">num_cpus=None</em>, <em class="sig-param">progress_bar=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/krotov/parallelization.html#parallel_map"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#krotov.parallelization.parallel_map" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">krotov.parallelization.</code><code class="sig-name descname">parallel_map</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">task</span></em>, <em class="sig-param"><span class="n">values</span></em>, <em class="sig-param"><span class="n">task_args</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">task_kwargs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_cpus</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">progress_bar</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/krotov/parallelization.html#parallel_map"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#krotov.parallelization.parallel_map" title="Permalink to this definition">¶</a></dt>
 <dd><p>Map function <cite>task</cite> onto <cite>values</cite>, in parallel.</p>
 <p>This function’s interface is identical to
 <a class="reference external" href="http://qutip.org/docs/latest/apidoc/functions.html#qutip.parallel.parallel_map" title="(in QuTiP: Quantum Toolbox in Python v4.5)"><code class="xref py py-func docutils literal notranslate"><span class="pre">qutip.parallel.parallel_map()</span></code></a> as of QuTiP 4.5.0, but has the option
@@ -436,9 +436,9 @@ also eliminates internal threads, according to
 <a class="reference internal" href="#krotov.parallelization.USE_THREADPOOL_LIMITS" title="krotov.parallelization.USE_THREADPOOL_LIMITS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">USE_THREADPOOL_LIMITS</span></code></a>.</p>
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="krotov.parallelization.Consumer">
-<em class="property">class </em><code class="sig-prename descclassname">krotov.parallelization.</code><code class="sig-name descname">Consumer</code><span class="sig-paren">(</span><em class="sig-param">task_queue</em>, <em class="sig-param">result_queue</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/krotov/parallelization.html#Consumer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#krotov.parallelization.Consumer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">krotov.parallelization.</code><code class="sig-name descname">Consumer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">task_queue</span></em>, <em class="sig-param"><span class="n">result_queue</span></em>, <em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/krotov/parallelization.html#Consumer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#krotov.parallelization.Consumer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/multiprocessing.html#multiprocessing.Process" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">multiprocessing.context.Process</span></code></a></p>
 <p>A process-based task consumer.</p>
 <p>This is for internal use in <a class="reference internal" href="#krotov.parallelization.parallel_map_fw_prop_step" title="krotov.parallelization.parallel_map_fw_prop_step"><code class="xref py py-func docutils literal notranslate"><span class="pre">parallel_map_fw_prop_step()</span></code></a>.</p>
@@ -453,7 +453,7 @@ of a task</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="krotov.parallelization.Consumer.run">
 <code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/krotov/parallelization.html#Consumer.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#krotov.parallelization.Consumer.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Execute all tasks on the <cite>task_queue</cite>.</p>
@@ -465,9 +465,9 @@ value on the <cite>task_queue</cite> acts as a “poison pill”, causing the
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="krotov.parallelization.FwPropStepTask">
-<em class="property">class </em><code class="sig-prename descclassname">krotov.parallelization.</code><code class="sig-name descname">FwPropStepTask</code><span class="sig-paren">(</span><em class="sig-param">i_state</em>, <em class="sig-param">pulse_vals</em>, <em class="sig-param">time_index</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/krotov/parallelization.html#FwPropStepTask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#krotov.parallelization.FwPropStepTask" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">krotov.parallelization.</code><code class="sig-name descname">FwPropStepTask</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">i_state</span></em>, <em class="sig-param"><span class="n">pulse_vals</span></em>, <em class="sig-param"><span class="n">time_index</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/krotov/parallelization.html#FwPropStepTask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#krotov.parallelization.FwPropStepTask" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>A task that performs a single forward-propagation step.</p>
 <p>The task object is a callable, receiving the single tuple of the same
@@ -495,9 +495,9 @@ propagation (assuming <cite>propagate</cite> in <a class="reference internal" hr
 side-effects)</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="krotov.parallelization.parallel_map_fw_prop_step">
-<code class="sig-prename descclassname">krotov.parallelization.</code><code class="sig-name descname">parallel_map_fw_prop_step</code><span class="sig-paren">(</span><em class="sig-param">shared</em>, <em class="sig-param">values</em>, <em class="sig-param">task_args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/krotov/parallelization.html#parallel_map_fw_prop_step"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#krotov.parallelization.parallel_map_fw_prop_step" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">krotov.parallelization.</code><code class="sig-name descname">parallel_map_fw_prop_step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">shared</span></em>, <em class="sig-param"><span class="n">values</span></em>, <em class="sig-param"><span class="n">task_args</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/krotov/parallelization.html#parallel_map_fw_prop_step"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#krotov.parallelization.parallel_map_fw_prop_step" title="Permalink to this definition">¶</a></dt>
 <dd><p><cite>parallel_map</cite> function for the forward-propagation by one time step.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -555,7 +555,7 @@ work correctly.</p></li>
     <p>
         &copy; Copyright 2020, Michael Goerz et al.
       <span class="lastupdated">
-        Last updated on Apr 02, 2020.
+        Last updated on Apr 09, 2020.
       </span>
 
     </p>
