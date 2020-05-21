@@ -364,7 +364,7 @@ particular environment.</p>
 <code class="sig-prename descclassname">krotov.parallelization.</code><code class="sig-name descname">USE_THREADPOOL_LIMITS</code><em class="property"> = True</em><a class="headerlink" href="#krotov.parallelization.USE_THREADPOOL_LIMITS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to limit the number of low-level BLAS/OpenMP threads.</p>
 <p>When using multi-process parallelization, <em>nested parallelization</em> must be
-avoided. That is, low-level numerical routines e.g. in <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/index.html#module-numpy" title="(in NumPy v1.17)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy</span></code></a> should not
+avoided. That is, low-level numerical routines e.g. in <a class="reference external" href="https://numpy.org/doc/stable/reference/index.html#module-numpy" title="(in NumPy v1.18)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy</span></code></a> should not
 be allowed to use multiple threads. This would lead to over-subscribing CPUs
 and can slow down the entire program by orders of magnitude.</p>
 <p>If True, <a class="reference external" href="https://github.com/joblib/threadpoolctl">threadpoolctl</a> will be used internally to attempt to eliminate any
@@ -555,7 +555,7 @@ work correctly.</p></li>
     <p>
         &copy; Copyright 2020, Michael Goerz et al.
       <span class="lastupdated">
-        Last updated on May 14, 2020.
+        Last updated on May 21, 2020.
       </span>
 
     </p>
