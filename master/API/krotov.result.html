@@ -259,176 +259,106 @@
 <p>Result of a Krotov optimization with <a class="reference internal" href="krotov.optimize.html#krotov.optimize.optimize_pulses" title="krotov.optimize.optimize_pulses"><code class="xref py py-func docutils literal notranslate"><span class="pre">optimize_pulses()</span></code></a>.</p>
 <dl class="py attribute">
 <dt id="krotov.result.Result.objectives">
-<code class="sig-name descname">objectives</code><a class="headerlink" href="#krotov.result.Result.objectives" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">objectives</code><em class="property">: list[Objective]</em><a class="headerlink" href="#krotov.result.Result.objectives" title="Permalink to this definition">¶</a></dt>
 <dd><p>The control objectives</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)">list</a>[<a class="reference internal" href="krotov.objectives.html#krotov.objectives.Objective" title="krotov.objectives.Objective">Objective</a>]</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="krotov.result.Result.tlist">
-<code class="sig-name descname">tlist</code><a class="headerlink" href="#krotov.result.Result.tlist" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tlist</code><em class="property">: <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.18)">numpy.ndarray</a></em><a class="headerlink" href="#krotov.result.Result.tlist" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time grid values</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.18)">numpy.ndarray</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="krotov.result.Result.iters">
-<code class="sig-name descname">iters</code><a class="headerlink" href="#krotov.result.Result.iters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">iters</code><em class="property">: list[int]</em><a class="headerlink" href="#krotov.result.Result.iters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Iteration numbers, starting at 0.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)">list</a>[<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(in Python v3.7)">int</a>]</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="krotov.result.Result.iter_seconds">
-<code class="sig-name descname">iter_seconds</code><a class="headerlink" href="#krotov.result.Result.iter_seconds" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">iter_seconds</code><em class="property">: list[int]</em><a class="headerlink" href="#krotov.result.Result.iter_seconds" title="Permalink to this definition">¶</a></dt>
 <dd><p>for each iteration number, the number of
 seconds that were spent in the optimization</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)">list</a>[<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(in Python v3.7)">int</a>]</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="krotov.result.Result.info_vals">
-<code class="sig-name descname">info_vals</code><a class="headerlink" href="#krotov.result.Result.info_vals" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">info_vals</code><em class="property">: <a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)">list</a></em><a class="headerlink" href="#krotov.result.Result.info_vals" title="Permalink to this definition">¶</a></dt>
 <dd><p>For each iteration, the return value of <cite>info_hook</cite>,
 or None</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)">list</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="krotov.result.Result.tau_vals">
-<code class="sig-name descname">tau_vals</code><a class="headerlink" href="#krotov.result.Result.tau_vals" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tau_vals</code><em class="property">: list[list[complex]</em><a class="headerlink" href="#krotov.result.Result.tau_vals" title="Permalink to this definition">¶</a></dt>
 <dd><p>for each iteration, a list of complex
 overlaps between the target state and the forward-propagated state
 for each objective, assuming <a class="reference internal" href="krotov.objectives.html#krotov.objectives.Objective.target" title="krotov.objectives.Objective.target"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Objective.target</span></code></a> contains the
 target state. If there is no target state, an empty list.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)">list</a>[<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)">list</a>[<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#complex" title="(in Python v3.7)">complex</a>]</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="krotov.result.Result.guess_controls">
-<code class="sig-name descname">guess_controls</code><a class="headerlink" href="#krotov.result.Result.guess_controls" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">guess_controls</code><em class="property">: list[numpy.ndarray]</em><a class="headerlink" href="#krotov.result.Result.guess_controls" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of the guess controls in
 array format</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)">list</a>[<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.18)">numpy.ndarray</a>]</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="krotov.result.Result.optimized_controls">
-<code class="sig-name descname">optimized_controls</code><a class="headerlink" href="#krotov.result.Result.optimized_controls" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">optimized_controls</code><em class="property">: list[numpy.ndarray]</em><a class="headerlink" href="#krotov.result.Result.optimized_controls" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of the optimized control
 fields, in the order corresponding to <a class="reference internal" href="#krotov.result.Result.guess_controls" title="krotov.result.Result.guess_controls"><code class="xref py py-attr docutils literal notranslate"><span class="pre">guess_controls</span></code></a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)">list</a>[<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.18)">numpy.ndarray</a>]</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="krotov.result.Result.controls_mapping">
-<code class="sig-name descname">controls_mapping</code><a class="headerlink" href="#krotov.result.Result.controls_mapping" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">controls_mapping</code><em class="property">: <a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)">list</a></em><a class="headerlink" href="#krotov.result.Result.controls_mapping" title="Permalink to this definition">¶</a></dt>
 <dd><p>A nested list that indicates where in
 <a class="reference internal" href="#krotov.result.Result.objectives" title="krotov.result.Result.objectives"><code class="xref py py-attr docutils literal notranslate"><span class="pre">objectives</span></code></a> the <a class="reference internal" href="#krotov.result.Result.guess_controls" title="krotov.result.Result.guess_controls"><code class="xref py py-attr docutils literal notranslate"><span class="pre">guess_controls</span></code></a> and
 <a class="reference internal" href="#krotov.result.Result.optimized_controls" title="krotov.result.Result.optimized_controls"><code class="xref py py-attr docutils literal notranslate"><span class="pre">optimized_controls</span></code></a> are used (as returned by
 <a class="reference internal" href="krotov.conversions.html#krotov.conversions.extract_controls_mapping" title="krotov.conversions.extract_controls_mapping"><code class="xref py py-func docutils literal notranslate"><span class="pre">extract_controls_mapping()</span></code></a>)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)">list</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="krotov.result.Result.all_pulses">
-<code class="sig-name descname">all_pulses</code><a class="headerlink" href="#krotov.result.Result.all_pulses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">all_pulses</code><em class="property">: <a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)">list</a></em><a class="headerlink" href="#krotov.result.Result.all_pulses" title="Permalink to this definition">¶</a></dt>
 <dd><p>If the optimization was performed with
 <code class="docutils literal notranslate"><span class="pre">store_all_pulses=True</span></code>, for each iteration, a list of the
 optimized pulses (in the order corresponding to
 <a class="reference internal" href="#krotov.result.Result.guess_controls" title="krotov.result.Result.guess_controls"><code class="xref py py-attr docutils literal notranslate"><span class="pre">guess_controls</span></code></a>).
 These pulses are defined at midpoints of the <cite>tlist</cite> intervals.
 Empty list if <code class="docutils literal notranslate"><span class="pre">store_all_pulses=False</span></code></p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)">list</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="krotov.result.Result.states">
-<code class="sig-name descname">states</code><a class="headerlink" href="#krotov.result.Result.states" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">states</code><em class="property">: list[list[qutip.Qobj]]</em><a class="headerlink" href="#krotov.result.Result.states" title="Permalink to this definition">¶</a></dt>
 <dd><p>for each objective, a list of states
 for each value in <cite>tlist</cite>, obtained from propagation under the
 final optimized control fields.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)">list</a>[<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)">list</a>[<a class="reference external" href="http://qutip.org/docs/latest/apidoc/classes.html#qutip.Qobj" title="(in QuTiP: Quantum Toolbox in Python v4.5)">qutip.Qobj</a>]]</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="krotov.result.Result.start_local_time">
-<code class="sig-name descname">start_local_time</code><a class="headerlink" href="#krotov.result.Result.start_local_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">start_local_time</code><em class="property">: <a class="reference external" href="https://docs.python.org/3.7/library/time.html#time.struct_time" title="(in Python v3.7)">time.struct_time</a></em><a class="headerlink" href="#krotov.result.Result.start_local_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Time stamp of when the
 optimization started</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/time.html#time.struct_time" title="(in Python v3.7)">time.struct_time</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="krotov.result.Result.end_local_time">
-<code class="sig-name descname">end_local_time</code><a class="headerlink" href="#krotov.result.Result.end_local_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">end_local_time</code><em class="property">: <a class="reference external" href="https://docs.python.org/3.7/library/time.html#time.struct_time" title="(in Python v3.7)">time.struct_time</a></em><a class="headerlink" href="#krotov.result.Result.end_local_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Time stamp of when the optimization
 ended</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/time.html#time.struct_time" title="(in Python v3.7)">time.struct_time</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="krotov.result.Result.message">
-<code class="sig-name descname">message</code><a class="headerlink" href="#krotov.result.Result.message" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">message</code><em class="property">: <a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)">str</a></em><a class="headerlink" href="#krotov.result.Result.message" title="Permalink to this definition">¶</a></dt>
 <dd><p>Description of why <a class="reference internal" href="krotov.optimize.html#krotov.optimize.optimize_pulses" title="krotov.optimize.optimize_pulses"><code class="xref py py-func docutils literal notranslate"><span class="pre">optimize_pulses()</span></code></a> completed,
 E.g, “Reached 1000 iterations”</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)">str</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
@@ -565,7 +495,7 @@ are callables/functions will not be preserved, as they are not
     <p>
         &copy; Copyright 2020, Michael Goerz et al.
       <span class="lastupdated">
-        Last updated on Jun 04, 2020.
+        Last updated on Jun 11, 2020.
       </span>
 
     </p>

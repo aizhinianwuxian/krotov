@@ -352,36 +352,6 @@ particular environment.</p>
 </div>
 <div class="section" id="reference">
 <h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
-<dl class="py data">
-<dt id="krotov.parallelization.USE_LOKY">
-<code class="sig-prename descclassname">krotov.parallelization.</code><code class="sig-name descname">USE_LOKY</code><em class="property"> = False</em><a class="headerlink" href="#krotov.parallelization.USE_LOKY" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to use <a class="reference external" href="https://loky.readthedocs.io/en/stable/API.html#module-loky" title="(in loky v2.4.2)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">loky</span></code></a> instead of <a class="reference external" href="https://docs.python.org/3.7/library/multiprocessing.html#module-multiprocessing" title="(in Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code></a>.</p>
-<p>Set by <a class="reference internal" href="#krotov.parallelization.set_parallelization" title="krotov.parallelization.set_parallelization"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_parallelization()</span></code></a>.</p>
-</dd></dl>
-
-<dl class="py data">
-<dt id="krotov.parallelization.USE_THREADPOOL_LIMITS">
-<code class="sig-prename descclassname">krotov.parallelization.</code><code class="sig-name descname">USE_THREADPOOL_LIMITS</code><em class="property"> = True</em><a class="headerlink" href="#krotov.parallelization.USE_THREADPOOL_LIMITS" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to limit the number of low-level BLAS/OpenMP threads.</p>
-<p>When using multi-process parallelization, <em>nested parallelization</em> must be
-avoided. That is, low-level numerical routines e.g. in <a class="reference external" href="https://numpy.org/doc/stable/reference/index.html#module-numpy" title="(in NumPy v1.18)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy</span></code></a> should not
-be allowed to use multiple threads. This would lead to over-subscribing CPUs
-and can slow down the entire program by orders of magnitude.</p>
-<p>If True, <a class="reference external" href="https://github.com/joblib/threadpoolctl">threadpoolctl</a> will be used internally to attempt to eliminate any
-nested threads.</p>
-<p>Set by <a class="reference internal" href="#krotov.parallelization.set_parallelization" title="krotov.parallelization.set_parallelization"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_parallelization()</span></code></a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Alternatively (or in addition), you may want to consider setting the
-following environment variables in your shell:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">MKL_NUM_THREADS</span><span class="o">=</span><span class="m">1</span>
-<span class="nb">export</span> <span class="nv">NUMEXPR_NUM_THREADS</span><span class="o">=</span><span class="m">1</span>
-<span class="nb">export</span> <span class="nv">OMP_NUM_THREADS</span><span class="o">=</span><span class="m">1</span>
-</pre></div>
-</div>
-</div>
-</dd></dl>
-
 <dl class="py function">
 <dt id="krotov.parallelization.set_parallelization">
 <code class="sig-prename descclassname">krotov.parallelization.</code><code class="sig-name descname">set_parallelization</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">use_loky</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">start_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loky_pickler</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_threadpool_limits</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/krotov/parallelization.html#set_parallelization"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#krotov.parallelization.set_parallelization" title="Permalink to this definition">¶</a></dt>
@@ -530,6 +500,36 @@ work correctly.</p></li>
 </dl>
 </dd></dl>
 
+<dl class="py data">
+<dt id="krotov.parallelization.USE_LOKY">
+<code class="sig-prename descclassname">krotov.parallelization.</code><code class="sig-name descname">USE_LOKY</code><em class="property"> = False</em><a class="headerlink" href="#krotov.parallelization.USE_LOKY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to use <a class="reference external" href="https://loky.readthedocs.io/en/stable/API.html#module-loky" title="(in loky v2.4.2)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">loky</span></code></a> instead of <a class="reference external" href="https://docs.python.org/3.7/library/multiprocessing.html#module-multiprocessing" title="(in Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code></a>.</p>
+<p>Set by <a class="reference internal" href="#krotov.parallelization.set_parallelization" title="krotov.parallelization.set_parallelization"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_parallelization()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="krotov.parallelization.USE_THREADPOOL_LIMITS">
+<code class="sig-prename descclassname">krotov.parallelization.</code><code class="sig-name descname">USE_THREADPOOL_LIMITS</code><em class="property"> = True</em><a class="headerlink" href="#krotov.parallelization.USE_THREADPOOL_LIMITS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to limit the number of low-level BLAS/OpenMP threads.</p>
+<p>When using multi-process parallelization, <em>nested parallelization</em> must be
+avoided. That is, low-level numerical routines e.g. in <a class="reference external" href="https://numpy.org/doc/stable/reference/index.html#module-numpy" title="(in NumPy v1.18)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy</span></code></a> should not
+be allowed to use multiple threads. This would lead to over-subscribing CPUs
+and can slow down the entire program by orders of magnitude.</p>
+<p>If True, <a class="reference external" href="https://github.com/joblib/threadpoolctl">threadpoolctl</a> will be used internally to attempt to eliminate any
+nested threads.</p>
+<p>Set by <a class="reference internal" href="#krotov.parallelization.set_parallelization" title="krotov.parallelization.set_parallelization"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_parallelization()</span></code></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Alternatively (or in addition), you may want to consider setting the
+following environment variables in your shell:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">MKL_NUM_THREADS</span><span class="o">=</span><span class="m">1</span>
+<span class="nb">export</span> <span class="nv">NUMEXPR_NUM_THREADS</span><span class="o">=</span><span class="m">1</span>
+<span class="nb">export</span> <span class="nv">OMP_NUM_THREADS</span><span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
 </div>
 </div>
 
@@ -555,7 +555,7 @@ work correctly.</p></li>
     <p>
         &copy; Copyright 2020, Michael Goerz et al.
       <span class="lastupdated">
-        Last updated on Jun 04, 2020.
+        Last updated on Jun 11, 2020.
       </span>
 
     </p>
