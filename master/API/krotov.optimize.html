@@ -321,7 +321,7 @@ are <a class="reference external" href="http://qutip.org/docs/latest/apidoc/clas
 <p>The use of <a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#dict" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> and the <code class="docutils literal notranslate"><span class="pre">{...}</span></code> syntax are completely
 equivalent, but <a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#dict" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> is better for nested indentation.</p>
 </p></li>
-<li><p><strong>tlist</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.18)"><em>numpy.ndarray</em></a>) – Array of time grid values, cf.
+<li><p><strong>tlist</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.19)"><em>numpy.ndarray</em></a>) – Array of time grid values, cf.
 <a class="reference external" href="http://qutip.org/docs/latest/apidoc/functions.html#qutip.mesolve.mesolve" title="(in QuTiP: Quantum Toolbox in Python v4.5)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mesolve()</span></code></a></p></li>
 <li><p><strong>propagator</strong> (<em>callable</em><em> or </em><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>[</em><em>callable</em><em>]</em>) – Function that propagates the
 state backward or forwards in time by a single time step, between
@@ -404,7 +404,7 @@ complex overlap of two states. If None, delegate to
 Hilbert-Schmidt norm <span class="math notranslate nohighlight">\(\tr[\rho_1^\dagger \rho2]\)</span> for density
 matrices or operators.</p></li>
 <li><p><strong>limit_thread_pool</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3.7/library/constants.html#None" title="(in Python v3.7)"><em>None</em></a>) – If True, try to eliminate
-multi-threading in low-level numerical routines like <a class="reference external" href="https://numpy.org/doc/stable/reference/index.html#module-numpy" title="(in NumPy v1.18)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy</span></code></a>,
+multi-threading in low-level numerical routines like <a class="reference external" href="https://numpy.org/doc/stable/reference/index.html#module-numpy" title="(in NumPy v1.19)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy</span></code></a>,
 via the use of the <code class="docutils literal notranslate"><span class="pre">threadpoolctl</span></code> package. Single-threaded
 execution is usually faster, but if you know what you are doing and
 can benchmark multi-threaded execution, you may set this to False
@@ -455,7 +455,7 @@ to place no restrictions on multi-threading. The default value
         
         &copy; Copyright 2020, Michael Goerz et al.
       <span class="lastupdated">
-        Last updated on Jun 25, 2020.
+        Last updated on Jul 02, 2020.
       </span>
 
     </p>

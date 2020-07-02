@@ -284,13 +284,13 @@ piecewise-constant “pulses” defined on the <em>intervals</em> of the time gr
 <dd><p>Convert control on time grid to control on time grid intervals</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>control</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.18)"><em>numpy.ndarray</em></a>) – values of controls on time grid</p>
+<dd class="field-odd"><p><strong>control</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.19)"><em>numpy.ndarray</em></a>) – values of controls on time grid</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>pulse defined on the intervals of the time grid</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.18)">numpy.ndarray</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.19)">numpy.ndarray</a></p>
 </dd>
 </dl>
 <p>The value for the first and last interval will be identical to the values
@@ -316,9 +316,9 @@ the discretization matches <cite>tlist</cite></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>control</strong> (<em>callable</em><em> or </em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.18)"><em>numpy.ndarray</em></a>) – control to be discretized. If
+<li><p><strong>control</strong> (<em>callable</em><em> or </em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.19)"><em>numpy.ndarray</em></a>) – control to be discretized. If
 callable, must take time value <cite>t</cite> as its first argument.</p></li>
-<li><p><strong>tlist</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.18)"><em>numpy.ndarray</em></a>) – time grid to discretize one</p></li>
+<li><p><strong>tlist</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.19)"><em>numpy.ndarray</em></a>) – time grid to discretize one</p></li>
 <li><p><strong>args</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#tuple" title="(in Python v3.7)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a>) – If <cite>control</cite> is a callable, further positional
 arguments to pass to <cite>control</cite>. The default passes a single value
 None, to match the requirements for a callable control function in
@@ -336,7 +336,7 @@ be passed.</p></li>
 </p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.18)">numpy.ndarray</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.19)">numpy.ndarray</a></p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
@@ -485,7 +485,7 @@ it has the right structure:</p>
 <dd><p>Convert <cite>pulse</cite> from time-grid intervals to time-grid points</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>pulse</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.18)"><em>numpy.ndarray</em></a>) – values defined on the interval of a time grid</p>
+<dd class="field-odd"><p><strong>pulse</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.19)"><em>numpy.ndarray</em></a>) – values defined on the interval of a time grid</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>values of the control defined directly on the time grid
@@ -493,7 +493,7 @@ points. The size of the returned array is one greater than the size
 of <cite>pulse</cite>.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.18)">numpy.ndarray</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.19)">numpy.ndarray</a></p>
 </dd>
 </dl>
 <p>Inverse of <a class="reference internal" href="#krotov.conversions.control_onto_interval" title="krotov.conversions.control_onto_interval"><code class="xref py py-func docutils literal notranslate"><span class="pre">control_onto_interval()</span></code></a>.</p>
@@ -542,7 +542,7 @@ list of the options-dicts in the same order as <cite>controls</cite>.</p>
         
         &copy; Copyright 2020, Michael Goerz et al.
       <span class="lastupdated">
-        Last updated on Jun 25, 2020.
+        Last updated on Jul 02, 2020.
       </span>
 
     </p>

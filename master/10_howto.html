@@ -669,7 +669,7 @@ amplitude constaints in the same way as applying spectral constaints, see
 <a class="reference internal" href="API/krotov.parallelization.html#module-krotov.parallelization" title="krotov.parallelization"><code class="xref py py-mod docutils literal notranslate"><span class="pre">krotov.parallelization</span></code></a>, and the
 <a class="reference internal" href="notebooks/05_example_transmon_xgate.html"><span class="std std-ref">Optimization of an X-Gate for a Transmon Qubit</span></a> for an example.</p>
 <p>It is exceedingly important to ensure that you do not use any accidental nested
-parallelization. The <a class="reference external" href="https://numpy.org/doc/stable/reference/index.html#module-numpy" title="(in NumPy v1.18)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy</span></code></a> library is often eager to run in a
+parallelization. The <a class="reference external" href="https://numpy.org/doc/stable/reference/index.html#module-numpy" title="(in NumPy v1.19)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy</span></code></a> library is often eager to run in a
 multi-threaded mode that does not combine well with the process-based
 parallelization in <a class="reference internal" href="API/krotov.parallelization.html#module-krotov.parallelization" title="krotov.parallelization"><code class="xref py py-mod docutils literal notranslate"><span class="pre">krotov.parallelization</span></code></a>. See
 <a class="reference internal" href="#howtolimitthreadpool"><span class="std std-ref">How to avoid over-subscribing the CPU when using parallelization</span></a>.</p>
@@ -684,7 +684,7 @@ by order of magnitudes compared to a serial program!</p>
 tightly controlled: If your program used process-based parallelization (and
 assuming each process can tax a CPU core at 100%), then you must prevent
 multiple threads within each process. Depending on how they were compiled, some
-of Python’s low-level numerical libraries (<a class="reference external" href="https://numpy.org/doc/stable/reference/index.html#module-numpy" title="(in NumPy v1.18)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy</span></code></a> in particular) are
+of Python’s low-level numerical libraries (<a class="reference external" href="https://numpy.org/doc/stable/reference/index.html#module-numpy" title="(in NumPy v1.19)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy</span></code></a> in particular) are
 eager to run in a multi-threaded mode, and it can be surprisingly difficult to
 convince them not to do this. In general, you can
 <a class="reference external" href="https://stackoverflow.com/questions/30791550/limit-number-of-threads-in-numpy/31622299#31622299">set environment variables to force low-level numerical code into single-threaded mode</a>:</p>
@@ -697,7 +697,7 @@ convince them not to do this. In general, you can
 equivalent for whatever shell you are using), and only change their values when
 you specifically want to enable multi-threaded execution. You can sometimes set
 these variables inside a Python script or notebook, but you must do so before
-importing <a class="reference external" href="https://numpy.org/doc/stable/reference/index.html#module-numpy" title="(in NumPy v1.18)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy</span></code></a>.</p>
+importing <a class="reference external" href="https://numpy.org/doc/stable/reference/index.html#module-numpy" title="(in NumPy v1.19)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy</span></code></a>.</p>
 <p>The <a class="reference external" href="https://github.com/joblib/threadpoolctl">threadpoolctl</a> python package is another alternative of eliminating
 unexpected multi-threading. The functions in <a class="reference internal" href="API/krotov.parallelization.html#module-krotov.parallelization" title="krotov.parallelization"><code class="xref py py-mod docutils literal notranslate"><span class="pre">krotov.parallelization</span></code></a> use
 this package internally to suppress low-level threads. For example, when using
@@ -803,7 +803,7 @@ instead.  See the <a class="reference internal" href="notebooks/09_example_numpy
         
         &copy; Copyright 2020, Michael Goerz et al.
       <span class="lastupdated">
-        Last updated on Jun 25, 2020.
+        Last updated on Jul 02, 2020.
       </span>
 
     </p>

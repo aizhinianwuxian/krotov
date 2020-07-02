@@ -300,9 +300,9 @@ the optimized pulses. None otherwise.</p></li>
 <li><p><strong>forward_states0</strong> – If available (second order only), for each objective,
 an array-like object containing the forward-propagated states under
 the guess pulses. None otherwise.</p></li>
-<li><p><strong>guess_pulses</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>[</em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.18)"><em>numpy.ndarray</em></a><em>]</em>) – list of guess pulses</p></li>
-<li><p><strong>optimized_pulses</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>[</em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.18)"><em>numpy.ndarray</em></a><em>]</em>) – list of optimized pulses</p></li>
-<li><p><strong>g_a_integrals</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.18)"><em>numpy.ndarray</em></a>) – array of values
+<li><p><strong>guess_pulses</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>[</em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.19)"><em>numpy.ndarray</em></a><em>]</em>) – list of guess pulses</p></li>
+<li><p><strong>optimized_pulses</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>[</em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.19)"><em>numpy.ndarray</em></a><em>]</em>) – list of optimized pulses</p></li>
+<li><p><strong>g_a_integrals</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.19)"><em>numpy.ndarray</em></a>) – array of values
 <span class="math notranslate nohighlight">\(\int_0^T g_a(t) \dd t = \int_0^T \frac{\lambda_a}{S(t)}
 \Abs{\Delta \epsilon(t)}^2 \dd t\)</span>, for each pulse <span class="math notranslate nohighlight">\(\epsilon(t)\)</span>.
 The pulse updates <span class="math notranslate nohighlight">\(\Delta \epsilon(t)\)</span> are the differences of the
@@ -316,14 +316,14 @@ up in <span class="math notranslate nohighlight">\(\int_0^T g_a(t) \dd t\)</span
 is increasing or decreasing between iterations gives an indication
 whether the optimization is “speeding up” or “slowing down”, and
 thus whether convergence is reached (negligible pulse updates).</p></li>
-<li><p><strong>lambda_vals</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.18)"><em>numpy.ndarray</em></a>) – for each pulse, the value of the
+<li><p><strong>lambda_vals</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.19)"><em>numpy.ndarray</em></a>) – for each pulse, the value of the
 <span class="math notranslate nohighlight">\(\lambda_a\)</span> parameter</p></li>
-<li><p><strong>shape_arrays</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>[</em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.18)"><em>numpy.ndarray</em></a><em>]</em>) – for each pulse, the array of
+<li><p><strong>shape_arrays</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>[</em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.19)"><em>numpy.ndarray</em></a><em>]</em>) – for each pulse, the array of
 update-shape values <span class="math notranslate nohighlight">\(S(t)\)</span></p></li>
 <li><p><strong>fw_states_T</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a>) – for each objective, the forward-propagated state</p></li>
-<li><p><strong>tlist</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.18)"><em>numpy.ndarray</em></a>) – array of time grid values on which the states
+<li><p><strong>tlist</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.19)"><em>numpy.ndarray</em></a>) – array of time grid values on which the states
 are defined</p></li>
-<li><p><strong>tau_vals</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.18)"><em>numpy.ndarray</em></a>) – for each objective, the complex overlap for
+<li><p><strong>tau_vals</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.19)"><em>numpy.ndarray</em></a>) – for each objective, the complex overlap for
 the target state with the forward-propagated state, or None if no
 target state is defined.</p></li>
 <li><p><strong>start_time</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a>) – The time at which the iteration started, in epoch
@@ -502,7 +502,7 @@ of the column headers and the length of the formatted values.</p>
         
         &copy; Copyright 2020, Michael Goerz et al.
       <span class="lastupdated">
-        Last updated on Jun 25, 2020.
+        Last updated on Jul 02, 2020.
       </span>
 
     </p>
